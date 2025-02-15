@@ -1,49 +1,24 @@
-
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail } from "lucide-react";
 
 const Index = () => {
-  const matrixRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const createMatrixBackground = () => {
-      if (!matrixRef.current) return;
-      
-      const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-      const numberOfCharacters = 50;
-      
-      matrixRef.current.innerHTML = "";
-      
-      for (let i = 0; i < numberOfCharacters; i++) {
-        const span = document.createElement("span");
-        span.className = "matrix-character";
-        span.style.left = `${Math.random() * 100}%`;
-        span.style.animationDelay = `${Math.random() * 20}s`;
-        span.textContent = characters[Math.floor(Math.random() * characters.length)];
-        matrixRef.current.appendChild(span);
-      }
-    };
-
-    createMatrixBackground();
-    const interval = setInterval(createMatrixBackground, 20000);
-    return () => clearInterval(interval);
-  }, []);
-
   const handleCollaborate = () => {
     window.location.href = "mailto:abc@gmail.com";
   };
 
   return (
     <div className="min-h-screen relative">
-      <div ref={matrixRef} className="matrix-bg" />
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyberpunk-blue/10 to-transparent opacity-20"></div>
+      </div>
       
-      {/* Hero Section */}
       <section className="min-h-screen flex flex-col items-center justify-center relative z-10">
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-4xl md:text-6xl font-bold text-white mb-4"
+          className="text-4xl md:text-6xl font-bold text-white mb-4 font-great-vibes"
         >
           Komal Patkar
         </motion.h1>
@@ -51,13 +26,12 @@ const Index = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className="text-xl md:text-2xl text-cyberpunk-blue mb-8"
+          className="text-xl md:text-2xl text-cyberpunk-blue mb-8 font-freckle-face"
         >
           MERN Stack Developer
         </motion.div>
       </section>
 
-      {/* About Section */}
       <section className="py-20 px-4 md:px-8 max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold mb-8 text-cyberpunk-pink">About Me</h2>
         <p className="text-lg leading-relaxed">
@@ -68,7 +42,6 @@ const Index = () => {
         </p>
       </section>
 
-      {/* Projects Section */}
       <section className="py-20 px-4 md:px-8">
         <h2 className="text-3xl font-bold mb-12 text-center text-cyberpunk-pink">Projects</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
@@ -117,23 +90,22 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Skills Section */}
       <section className="py-20 px-4 md:px-8 max-w-6xl mx-auto">
         <h2 className="text-3xl font-bold mb-12 text-center text-cyberpunk-pink">Skills & Tech Stack</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
-            { name: "HTML", img: "/tech/html.svg" },
-            { name: "CSS", img: "/tech/css.svg" },
-            { name: "JavaScript", img: "/tech/javascript.svg" },
-            { name: "React", img: "/tech/react.svg" },
-            { name: "TypeScript", img: "/tech/typescript.svg" },
-            { name: "Tailwind", img: "/tech/tailwind.svg" },
-            { name: "Node.js", img: "/tech/nodejs.svg" },
-            { name: "MongoDB", img: "/tech/mongodb.svg" },
-            { name: "Python", img: "/tech/python.svg" },
-            { name: "SQL", img: "/tech/sql.svg" },
-            { name: "Supabase", img: "/tech/supabase.svg" },
-            { name: "Postman", img: "/tech/postman.svg" }
+            { name: "HTML", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" },
+            { name: "CSS", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
+            { name: "JavaScript", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
+            { name: "React", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+            { name: "TypeScript", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+            { name: "Tailwind", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" },
+            { name: "Node.js", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+            { name: "MongoDB", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+            { name: "Python", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
+            { name: "SQL", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
+            { name: "Supabase", img: "https://seeklogo.com/images/S/supabase-logo-DCC676FFE2-seeklogo.com.png" },
+            { name: "Postman", img: "https://www.vectorlogo.zone/logos/getpostman/getpostman-icon.svg" }
           ].map((tech, index) => (
             <motion.div
               key={index}
@@ -153,7 +125,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
       <section className="py-20 px-4 md:px-8 text-center">
         <h2 className="text-3xl font-bold mb-12 text-cyberpunk-pink">Let's Collaborate</h2>
         <div className="flex flex-col items-center gap-6">
