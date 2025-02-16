@@ -5,14 +5,45 @@ import { Github, Linkedin, Mail } from "lucide-react";
 
 const Index = () => {
   const handleCollaborate = () => {
-    window.location.href = "mailto:abc@gmail.com";
+    window.location.href = "mailto:komalpatkar05@gmail.com";
   };
 
   return (
     <div className="min-h-screen relative">
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyberpunk-blue/10 to-transparent opacity-20"></div>
+        {[...Array(10)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute"
+            initial={{
+              left: `${Math.random() * 100}%`,
+              top: "100%",
+              rotate: 0,
+              opacity: 0.8
+            }}
+            animate={{
+              top: "-10%",
+              left: `${Math.random() * 100}%`,
+              rotate: 360,
+              opacity: 0
+            }}
+            transition={{
+              duration: Math.random() * 5 + 5,
+              repeat: Infinity,
+              delay: Math.random() * 5
+            }}
+          >
+            <div 
+              className="w-6 h-6 md:w-8 md:h-8"
+              style={{
+                background: `radial-gradient(circle at 30% 30%, #D946EF, #FFDEE2)`,
+                clipPath: "polygon(50% 0%, 83% 12%, 100% 43%, 94% 78%, 68% 100%, 32% 100%, 6% 78%, 0% 43%, 17% 12%)",
+                transform: "rotate(45deg)"
+              }}
+            />
+          </motion.div>
+        ))}
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyberpunk-blue/5 to-transparent"></div>
       </div>
       
       <section className="min-h-screen flex flex-col items-center justify-center relative z-10">
