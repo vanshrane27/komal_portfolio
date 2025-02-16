@@ -92,7 +92,7 @@ const Index = () => {
             {
               title: "Crop Disease Detection",
               description: "AI-powered crop disease detection and yield prediction",
-              github: "https://github.com/komalpatkar/CROP"
+              github: "https://github.com/komalpatkar/CROPS"
             },
             {
               title: "Gift Recommendation",
