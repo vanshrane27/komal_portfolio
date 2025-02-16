@@ -67,10 +67,11 @@ const Index = () => {
       <section className="py-20 px-4 md:px-8 max-w-4xl mx-auto">
         <h2 className="text-3xl font-bold mb-8 text-cyberpunk-pink">About Me</h2>
         <p className="text-lg leading-relaxed">
-          I'm a passionate MERN Stack Developer with a strong foundation in web development.
-          I specialize in building scalable web applications using modern technologies.
-          My approach combines technical expertise with creative problem-solving to deliver
-          exceptional user experiences.
+          I'm a passionate MERN Stack Developer with a strong focus on building scalable, responsive, and user-friendly web applications.
+          I enjoy turning complex ideas into seamless digital experiences using MongoDB, Express.js, React.js, and Node.js.
+          With hands-on experience in developing interactive frontends, robust backends, and efficient database systems, I strive to write clean, maintainable code while following modern development practices.
+          From single-page applications to full-stack platforms, I love crafting solutions that not only function well but also offer an engaging user experience.
+          Let's build something amazing together!
         </p>
       </section>
 
@@ -81,22 +82,22 @@ const Index = () => {
             {
               title: "AI Image Generator",
               description: "Generate unique images using AI technology",
-              github: "https://github.com/username/ai-image-generator"
+              github: "https://github.com/komalpatkar/AI-Image-Generator"
             },
             {
               title: "BLCassests",
               description: "Blockchain assets management platform",
-              github: "https://github.com/username/blcassests"
+              github: "https://github.com/komalpatkar/Digital-Assets-Management"
             },
             {
               title: "Crop Disease Detection",
               description: "AI-powered crop disease detection and yield prediction",
-              github: "https://github.com/username/crop-disease-detection"
+              github: "https://github.com/komalpatkar/CROP"
             },
             {
               title: "Gift Recommendation",
               description: "Smart gift recommendation system",
-              github: "https://github.com/username/gift-recommendation"
+              github: "https://github.com/komalpatkar/Gift-Recommendation"
             }
           ].map((project, index) => (
             <motion.div
