@@ -1,3 +1,4 @@
+
 import React from "react";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail } from "lucide-react";
@@ -18,15 +19,15 @@ const Index = () => {
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-4xl md:text-6xl font-bold text-white mb-4 font-great-vibes"
+          className="text-5xl md:text-7xl font-bold text-white mb-4 font-great-vibes"
         >
-          Komal Patkar
+          Komal <span className="ml-2">Patkar</span>
         </motion.h1>
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className="text-xl md:text-2xl text-cyberpunk-blue mb-8 font-freckle-face"
+          className="text-2xl md:text-3xl text-cyberpunk-blue mb-8 font-freckle-face"
         >
           MERN Stack Developer
         </motion.div>
@@ -99,7 +100,7 @@ const Index = () => {
             { name: "JavaScript", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
             { name: "React", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
             { name: "TypeScript", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
-            { name: "Tailwind", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" },
+            { name: "Tailwind", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
             { name: "Node.js", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
             { name: "MongoDB", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
             { name: "Python", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
@@ -137,7 +138,7 @@ const Index = () => {
           </button>
           <div className="flex gap-4">
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/komalpatkar?"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-cyberpunk-blue transition-colors duration-300"
@@ -145,7 +146,7 @@ const Index = () => {
               <Github size={24} />
             </a>
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://www.linkedin.com/in/komal-patkar-5a5b02220?"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-cyberpunk-blue transition-colors duration-300"
